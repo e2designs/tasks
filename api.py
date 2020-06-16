@@ -1,4 +1,4 @@
-
+from datetime import datetime
 
 def add_task(name, due_date, description):
     """
@@ -11,6 +11,11 @@ def add_task(name, due_date, description):
     :return: locals
     """
     print(locals())
+    try:
+        date = datetime(due_date)
+    except Exception:
+        print("Ran into an exception")
+
     return locals()
 
 
